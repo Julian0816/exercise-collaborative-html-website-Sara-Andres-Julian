@@ -2,18 +2,87 @@ body{
     background: #FFFFFF;
 }
 
-.services{
-    background: white;
-}
-
-.breakingbad{
+.r-images{
     width: 350px;
     height: auto;
 }
 
-.centered {
+.tagline-text{
     position: absolute;
-    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.7); 
+    color: black; 
+    text-align: center;
+    width: 98%;
+}
+.first-text {
+    top: 15vw;
+    font-size: 8vw;
+    font-weight: 500; 
+}
+.second-text {
+    top: 27vw;
+    font-size: 5vw;
+}
+
+.cards {
+	display: flex;
+	list-style: none;
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+  }
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 100%;
+    padding: 20px;
+    background: white;
+    color: black;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+    scroll-snap-align: start;
+    transition: all 0.2s;
+}
+
+.card:not(:last-child) {
+    margin-right: 10px;
+}
+
+.card .card-link {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: var(--red);
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+@media (min-width: 500px) {
+    .card {
+        flex-basis: calc(50% - 10px);
+    }
+
+    .card:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+@media (min-width: 700px) {
+    .card {
+        flex-basis: calc(calc(100% / 3) - 20px);
+    }
+
+    .card:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+@media (min-width: 1100px) {
+    .card {
+        flex-basis: calc(25% - 30px);
+    }
+
+    .card:not(:last-child) {
+        margin-right: 40px;
+}
 }
